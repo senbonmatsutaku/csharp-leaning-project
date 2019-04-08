@@ -7,7 +7,7 @@ namespace chapter_00
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine("Hello 000 san!");
+            Console.WriteLine("Hello 667 san!");
         }
     }
 }
