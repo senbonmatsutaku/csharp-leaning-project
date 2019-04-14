@@ -108,16 +108,16 @@ namespace chapter_01.controller
             switch (taskNumber)
             {
                 case 1:
-                    task.learnJavaMechanism();
+                    task.LearnCsharpMechanism();
                     break;
                 case 2:
-                    task.learnVariable();
+                    task.LearnVariable();
                     break;
                 case 3:
-                    task.learnConstant();
+                    task.LearnConstant();
                     break;
                 case 4:
-                    task.learnDataType();
+                    task.LearnDataType();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException($"問 {taskNumber} は存在しません。");

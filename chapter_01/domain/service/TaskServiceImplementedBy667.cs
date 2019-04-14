@@ -10,25 +10,25 @@ namespace chapter_01.domain.service
     public class TaskServiceImplementedBy667 : ITask
     {
         // 問１
-        public void learnConstant()
+        public void LearnConstant()
         {
             Console.WriteLine("問３実行したつもり");
         }
 
         // 問２
-        public void learnDataType()
+        public void LearnDataType()
         {
             Console.WriteLine("問４実行したつもり");
         }
 
         // 問３
-        public void learnJavaMechanism()
+        public void LearnCsharpMechanism()
         {
             Console.WriteLine("問１実行したつもり");
         }
 
         // 問４
-        public void learnVariable()
+        public void LearnVariable()
         {
             Console.WriteLine("問２実行したつもり");
         }
