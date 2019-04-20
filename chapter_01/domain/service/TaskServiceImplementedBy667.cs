@@ -25,7 +25,7 @@ namespace chapter_01.domain.service
             bool flg = true;
             double syosuu = 3.14;
             long largeValue = 314159265853979L;
-            string mozj2 = "為せば成る 為さねば成らぬ 何事も 成らぬは人の 為さぬなりけり";
+            string moji2 = "為せば成る 為さねば成らぬ 何事も 成らぬは人の 為さぬなりけり";
             Console.WriteLine(moji);
             Console.WriteLine(flg);
             Console.WriteLine(syosuu);
