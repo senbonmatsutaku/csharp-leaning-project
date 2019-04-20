@@ -9,28 +9,43 @@ namespace chapter_01.domain.service
     /// </summary>
     public class TaskServiceImplementedBy667 : ITask
     {
-        // 問１
+        // 問3
         public void LearnConstant()
         {
-            Console.WriteLine("問３実行したつもり");
+            int Tax = 100;
+            double syohizei = 0.08;
+            double result = Tax + (Tax * syohizei);
+            Console.WriteLine("商品お買い上げありがとうございます"+result+"円になります");
         }
 
-        // 問２
+        // 問4
         public void LearnDataType()
         {
-            Console.WriteLine("問４実行したつもり");
+            char mozi = '侍';
+            bool flg = true;
+            double syosuu = 3.14;
+            double syosuu_2 = 314159265853979L;
+            string mozi_2 = "為せば成る 為さねば成らぬ 何事も 成らぬは人の 為さぬなりけり";
+            Console.WriteLine(mozi);
+            Console.WriteLine(flg);
+            Console.WriteLine(syosuu);
+            Console.WriteLine(syosuu_2);
+            Console.WriteLine(mozi_2);
         }
 
-        // 問３
+        // 問1
         public void LearnCsharpMechanism()
         {
-            Console.WriteLine("問１実行したつもり");
+            Console.WriteLine("C#は共通言語基盤（共通言語ランタイムなど）が解釈する共通中間言語にコンパイルされて実行される。自動ボックス化、デリゲート、 プロパティ、インデクサ、カスタム属性、ポインタ演算操作、構造体（値型オブジェクト）、多次元配列、可変長引数、などの機能を持つ。また、Javaと同様に大規模ライブラリ、プロセッサ・アーキテクチャに依存しない実行形態、ガベージコレクション、JITコンパイルによる実行の高速化、などが実現されている（もっともこれらはC#の機能というより.NET Frameworkによるものである）。");
         }
 
-        // 問４
+        // 問4
         public void LearnVariable()
         {
-            Console.WriteLine("問２実行したつもり");
+            int x = 3;
+            int y = 5;
+            int z = x * y;
+            Console.WriteLine("縦"+x+"横"+y+"の長方形の面積は"+z);
         }
     }
 }
