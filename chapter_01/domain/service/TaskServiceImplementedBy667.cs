@@ -12,25 +12,25 @@ namespace chapter_01.domain.service
         // 問3
         public void LearnConstant()
         {
-            int Tax = 100;
-            double syohizei = 0.08;
-            double result = Tax + (Tax * syohizei);
+            int price = 100;
+            double Tax = 1.08;
+            double result = price * Tax;
             Console.WriteLine("商品お買い上げありがとうございます"+result+"円になります");
         }
 
         // 問4
         public void LearnDataType()
         {
-            char mozi = '侍';
+            char moji = '侍';
             bool flg = true;
             double syosuu = 3.14;
-            double syosuu_2 = 314159265853979L;
-            string mozi_2 = "為せば成る 為さねば成らぬ 何事も 成らぬは人の 為さぬなりけり";
-            Console.WriteLine(mozi);
+            long largeValue = 314159265853979L;
+            string moji2 = "為せば成る 為さねば成らぬ 何事も 成らぬは人の 為さぬなりけり";
+            Console.WriteLine(moji);
             Console.WriteLine(flg);
             Console.WriteLine(syosuu);
-            Console.WriteLine(syosuu_2);
-            Console.WriteLine(mozi_2);
+            Console.WriteLine(largeValue);
+            Console.WriteLine(moji2);
         }
 
         // 問1
