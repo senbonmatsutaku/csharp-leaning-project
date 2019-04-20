@@ -30,7 +30,7 @@ namespace chapter_01.domain.service
             Console.WriteLine(flg);
             Console.WriteLine(syosuu);
             Console.WriteLine(largeValue);
-            Console.WriteLine(moji2);
+            Console.WriteLine(moji2);　
         }
 
         // 問1
