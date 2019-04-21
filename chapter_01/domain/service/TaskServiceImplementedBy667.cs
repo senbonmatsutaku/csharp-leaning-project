@@ -13,7 +13,7 @@ namespace chapter_01.domain.service
         public void LearnConstant()
         {
             int price = 100;
-            double Tax = 1.08;
+            const double Tax = 1.08;
             double result = price * Tax;
             Console.WriteLine("商品お買い上げありがとうございます"+result+"円になります");
         }
