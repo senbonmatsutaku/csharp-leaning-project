@@ -8,13 +8,15 @@ namespace chapter_02.domain.service
     {
         public void FortuneGame()
         {
+            
         }
 
         public void LearnOperatorPriority()
         {
             int x = 2;
             int y = 3;
-            String answer = "x + y = " + x + y;
+            int z = x + y;
+            String answer = "x + y = " + z;
             Console.WriteLine("x = " + x);
             Console.WriteLine("y = " + y);
             Console.WriteLine(answer);
@@ -22,6 +24,7 @@ namespace chapter_02.domain.service
 
         public void LearnTypeConversion()
         {
+            Console.WriteLine("ようこそ占いの館へ");
         }
     }
 }
