@@ -13,13 +13,12 @@ namespace chapter_02.domain.service
             string name = Console.ReadLine();
             Console.WriteLine("あなたの年齢を入力してください");
             string ageString = Console.ReadLine();
-            Console.WriteLine(name);
-            Console.WriteLine(ageString);
+            int age = Convert.ToInt32(ageString);
             System.Random r = new System.Random();
             int fortune = r.Next(0, 4);
             fortune++;
             Console.WriteLine("占いの結果が出ました");
-            Console.WriteLine(ageString + "歳の" + name + "さん、あなたの運気番号は" + fortune + "です。");
+            Console.WriteLine(age + "歳の" + name + "さん、あなたの運気番号は" + fortune + "です。");
             Console.WriteLine("1:大吉 2:中吉 3:吉 4:凶");
         }
 
