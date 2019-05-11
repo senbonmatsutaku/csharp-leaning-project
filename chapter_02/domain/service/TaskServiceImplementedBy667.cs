@@ -8,7 +8,19 @@ namespace chapter_02.domain.service
     {
         public void FortuneGame()
         {
-            
+            Console.WriteLine("ようこそ占いの館へ");
+            Console.WriteLine("あなたの名前を入力して下さい");
+            string name = Console.ReadLine();
+            Console.WriteLine("あなたの年齢を入力してください");
+            string ageString = Console.ReadLine();
+            Console.WriteLine(name);
+            Console.WriteLine(ageString);
+            System.Random r = new System.Random();
+            int fortune = r.Next(0, 4);
+            fortune++;
+            Console.WriteLine("占いの結果が出ました");
+            Console.WriteLine(ageString + "歳の" + name + "さん、あなたの運気番号は" + fortune + "です。");
+            Console.WriteLine("1:大吉 2:中吉 3:吉 4:凶");
         }
 
         public void LearnOperatorPriority()
@@ -24,7 +36,7 @@ namespace chapter_02.domain.service
 
         public void LearnTypeConversion()
         {
-            Console.WriteLine("ようこそ占いの館へ");
+            Console.WriteLine("正しい文は2,4,5,7です。");
         }
     }
 }
