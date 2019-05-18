@@ -11,7 +11,6 @@ namespace chapter_03.domain.service
             Console.WriteLine("数当てゲーム");
             System.Random r = new System.Random();
             int answer = r.Next(0, 9);
-            Console.WriteLine(answer);
             Console.WriteLine("0 ～ 9 の数字を入力してください");
             var num = Console.ReadLine();
             for (int i = 0; i<4; ++i)
