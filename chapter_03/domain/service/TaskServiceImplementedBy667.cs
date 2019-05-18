@@ -42,6 +42,7 @@ namespace chapter_03.domain.service
 
         public void LearnIfSyntax1()
         {
+
         }
 
         public void LearnIfSyntax2()
