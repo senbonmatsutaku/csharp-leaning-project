@@ -11,16 +11,24 @@ namespace chapter_03.domain.service
             Console.WriteLine("数当てゲーム");
             System.Random r = new System.Random();
             int answer = r.Next(0, 9);
+            Console.WriteLine(answer);
             Console.WriteLine("0 ～ 9 の数字を入力してください");
             var num = Console.ReadLine();
-            while (answer != int.Parse(num))
+            for (int i = 0; i<4; ++i)
             {
-                Console.WriteLine("ハズレ！");
-                Console.WriteLine("0 ～ 9 の数字を入力してください");
-                num = Console.ReadLine();
+                if(int.Parse(num) != answer)
+                {
+                    Console.WriteLine("ハズレ！");
+                    Console.WriteLine("0 ～ 9 の数字を入力してください");
+                    num = Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("アタリ！");
+                    break;
+                }
+                Console.WriteLine("ゲームを終了します");
             }
-            Console.WriteLine("アタリ！");
-
         }
 
         public void LearnIfStatement1()
@@ -32,8 +40,9 @@ namespace chapter_03.domain.service
             {
                 Console.WriteLine("私は男です");
                 Console.WriteLine(age + "歳です");
+                sex += 1;
             }
-            else if (sex == 1)
+            if (sex == 1)
             {
                 Console.WriteLine("私は女です");
             }
@@ -74,7 +83,7 @@ namespace chapter_03.domain.service
             int age = 0;
             int age1 = 0;
             int age2 = 0;
-            String job = "";
+            String job = "プログラマー";
             if(weight ==60)
             {
 
@@ -82,20 +91,20 @@ namespace chapter_03.domain.service
             if ((age1 + age2) * 2 > 60)
             {
             }
-            if((age/2) >0)
+            if(age % 2 == 1)
             {
 
             }
-            if(job == "プログラマー")
+            if(job.Equals("プログラマー"))
             {
-
+                
             }
 
         }
 
         public void LearnIfSyntax2()
         {
-            Console.Write("条件式として正しいのはC,D,E,F");
+            Console.Write("条件式として正しいのはC,E,F");
         }
 
         public void LearnSwitchStatement()
@@ -105,19 +114,19 @@ namespace chapter_03.domain.service
             switch (selected)
             {
                 case "1":
-                    Console.Write("検索します");
+                    Console.WriteLine("検索します");
                     break;
                 case "2":
-                    Console.Write("登録します");
+                    Console.WriteLine("登録します");
                     break;
                 case "3":
-                    Console.Write("削除します");
+                    Console.WriteLine("削除します");
                     break;
                 case "4":
-                    Console.Write("変更します");
+                    Console.WriteLine("変更します");
                     break;
                 default:
-                    Console.Write("メニューにありません");
+                    Console.WriteLine("メニューにありません");
                     break;
             }
         }
