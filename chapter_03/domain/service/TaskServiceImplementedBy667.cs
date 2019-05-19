@@ -32,16 +32,16 @@ namespace chapter_03.domain.service
 
         public void LearnIfStatement1()
         {
-            int sex = 0;
+            System.Random r = new System.Random();
+            int sex = r.Next(0,2);
             int age = 10;
             Console.WriteLine("こんにちは");
             if (sex == 0)
             {
                 Console.WriteLine("私は男です");
                 Console.WriteLine(age + "歳です");
-                sex += 1;
             }
-            if (sex == 1)
+            else if (sex == 1)
             {
                 Console.WriteLine("私は女です");
             }
@@ -103,7 +103,7 @@ namespace chapter_03.domain.service
 
         public void LearnIfSyntax2()
         {
-            Console.Write("条件式として正しいのはC,E,F");
+            Console.Write("条件式として正しいのはC,D,E");
         }
 
         public void LearnSwitchStatement()
