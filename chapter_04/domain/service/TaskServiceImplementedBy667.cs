@@ -9,10 +9,10 @@ namespace chapter_04.domain.service
         public void CountGame()
         {
             int[] numbers = { 3, 4, 9 };
-            Console.Write("１桁の数字を入力してください >");
-            var input = int.Parse(Console.ReadLine());
-            for(int i=0; i<2; i++)
+            for(int i=0; i<3; i++)
             {
+                Console.Write("１桁の数字を入力してください >");
+                var input = int.Parse(Console.ReadLine());
                 for (int j = 0; j <= 2; j++)
                 {
                     if (numbers[j] == input)
@@ -22,8 +22,6 @@ namespace chapter_04.domain.service
                     }
                 }
                 Console.WriteLine("ハズレ");
-                Console.Write("１桁の数字を入力してください >");
-                input = int.Parse(Console.ReadLine());
             }
         }
 
@@ -32,15 +30,15 @@ namespace chapter_04.domain.service
             int[] points = new int[4];
             double[] weights = new double[4];
             bool[] answers = new bool[4];
-            String[] names = new String[4];
+            char[] names = new char[4];
         }
 
         public void LearnArrayFactorDisplay()
         {
             int[] moneyList = { 121902, 8302, 55100 };
-            for(int i = 0; i<3; i++)
+            foreach(int i in moneyList)
             {
-                Console.WriteLine(moneyList[i]);
+                Console.WriteLine(i);
             }
         }
 
