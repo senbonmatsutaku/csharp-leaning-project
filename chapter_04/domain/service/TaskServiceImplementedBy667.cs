@@ -30,7 +30,7 @@ namespace chapter_04.domain.service
             int[] points = new int[4];
             double[] weights = new double[4];
             bool[] answers = new bool[4];
-            char[] names = new char[4];
+            string[] names = new string[4];
         }
 
         public void LearnArrayFactorDisplay()
@@ -39,6 +39,10 @@ namespace chapter_04.domain.service
             foreach(int i in moneyList)
             {
                 Console.WriteLine(i);
+            }
+            for(int i = 0; i<3; i++)
+            {
+                Console.WriteLine(moneyList[i]);
             }
         }
 
