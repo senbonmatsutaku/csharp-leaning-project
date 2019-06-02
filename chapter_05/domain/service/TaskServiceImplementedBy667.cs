@@ -14,7 +14,7 @@ namespace chapter_05.domain.service
         public void LearnMethod2()
         {
             int number;
-            Console.Write("数字を入力してください");
+            Console.Write("数字を入力してください>");
             number = int.Parse(Console.ReadLine());
             multiplication(number);
         }
