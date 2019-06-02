@@ -22,7 +22,6 @@ namespace chapter_05.domain.service
         public void LearnMethod3()
         {
             int year;
-            int Era;
             year = int.Parse(Console.ReadLine());
             if (year > 1900 && year < 2021)
             {
