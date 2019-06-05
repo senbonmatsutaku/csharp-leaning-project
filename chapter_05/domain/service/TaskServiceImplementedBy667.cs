@@ -22,6 +22,7 @@ namespace chapter_05.domain.service
         public void LearnMethod3()
         {
             int year;
+            Console.Write("年数をを入力してください>");
             year = int.Parse(Console.ReadLine());
             if (year > 1900 && year < 2021)
             {
@@ -47,7 +48,7 @@ namespace chapter_05.domain.service
             }
             else
             {
-                Console.WriteLine("1900-2020の間ではありません");
+                Console.WriteLine("1900-2020の間ではありません。");
             }
         }
 
@@ -63,14 +64,14 @@ namespace chapter_05.domain.service
         {
             string name;
             int age;
-            int height;
+            float height;
             string sex;
             Console.WriteLine("名前を入力してください");
             name = Console.ReadLine();
             Console.WriteLine("年齢を入力してください");
             age = int.Parse(Console.ReadLine());
             Console.WriteLine("身長を入力してください");
-            height = int.Parse(Console.ReadLine());
+            height = float.Parse(Console.ReadLine());
             Console.WriteLine("性別を入力してください");
             sex = Console.ReadLine();
             Console.WriteLine(name);
@@ -85,9 +86,9 @@ namespace chapter_05.domain.service
             {
                 result[i-1] = num * i;
             }
-            foreach(int j in result)
+            for(int j=1; j <= 9; j++)
             {
-                Console.WriteLine(j);
+                Console.WriteLine(num + "の段の計算結果→" + num + "×" + j + "=" + result[j - 1]);
             }
         }
         private string yearToEra(int year)
@@ -117,27 +118,29 @@ namespace chapter_05.domain.service
         private void taxCalculation(int year,float price)
         {
             double contax;
-            if (year <= 1988)
+            string Era = yearToEra(year);
+
+            if (Era == "明治")
             {
                 Console.WriteLine("明治");
                 Console.WriteLine("0%");
                 Console.WriteLine(price);
             }
-            else if (year <= 1989)
+            else if (Era == "大正")
             {
                 Console.WriteLine("大正");
                 Console.WriteLine("3%");
                 contax = Math.Ceiling(price * 0.03);
                 Console.WriteLine(price + contax);
             }
-            else if (year <= 1997)
+            else if(Era == "昭和")
             {
                 Console.WriteLine("昭和");
                 Console.WriteLine("5%");
                 contax = Math.Ceiling(price * 0.05);
                 Console.WriteLine(price + contax);
             }
-            else if (year <= 2014)
+            else if(Era == "平成")
             {
                 Console.WriteLine("平成");
                 Console.WriteLine("8%");
