@@ -48,7 +48,7 @@ namespace chapter_05.domain.service
             }
             else
             {
-                Console.WriteLine("1900-2020の間ではありません");
+                Console.WriteLine("1900-2020の間ではありません。");
             }
         }
 
