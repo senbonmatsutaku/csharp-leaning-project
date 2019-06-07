@@ -16,7 +16,15 @@ namespace chapter_05.domain.service
             int number;
             Console.Write("数字を入力してください>");
             number = int.Parse(Console.ReadLine());
-            multiplication(number);
+            if (number > 0 && number < 10)
+            {
+                multiplication(number);
+            }
+            else
+            {
+                Console.Write("有効範囲外です");
+            }
+            
         }
 
         public void LearnMethod3()
@@ -24,7 +32,7 @@ namespace chapter_05.domain.service
             int year;
             Console.Write("年数をを入力してください>");
             year = int.Parse(Console.ReadLine());
-            if (year > 1900 && year < 2021)
+            if (year > 1899 && year < 2021)
             {
                 Console.WriteLine(yearToEra(year));
             }
@@ -42,7 +50,7 @@ namespace chapter_05.domain.service
             year = int.Parse(Console.ReadLine());
             Console.Write("値段を入力してください>");
             price = int.Parse(Console.ReadLine());
-            if (year > 1900 && year < 2021)
+            if (year > 1899 && year < 2021)
             {
                 taxCalculation(year, price);
             }
@@ -120,36 +128,36 @@ namespace chapter_05.domain.service
             double contax;
             string Era = yearToEra(year);
 
-            if (Era == "明治")
+            if (year <= 1988)
             {
-                Console.WriteLine("明治");
+                Console.WriteLine(Era);
                 Console.WriteLine("0%");
                 Console.WriteLine(price);
             }
-            else if (Era == "大正")
+            else if (year >= 1989 && year < 1997)
             {
-                Console.WriteLine("大正");
+                Console.WriteLine(Era);
                 Console.WriteLine("3%");
                 contax = Math.Ceiling(price * 0.03);
                 Console.WriteLine(price + contax);
             }
-            else if(Era == "昭和")
+            else if (year >= 1997 && year < 2014)
             {
-                Console.WriteLine("昭和");
+                Console.WriteLine(Era);
                 Console.WriteLine("5%");
                 contax = Math.Ceiling(price * 0.05);
                 Console.WriteLine(price + contax);
             }
-            else if(Era == "平成")
+            else if (year >= 2014 && year < 2019)
             {
-                Console.WriteLine("平成");
+                Console.WriteLine(Era);
                 Console.WriteLine("8%");
                 contax = Math.Ceiling(price * 0.08);
                 Console.WriteLine(price + contax);
             }
-            else
+            else if (year >= 2015)
             {
-                Console.WriteLine("令和");
+                Console.WriteLine(Era);
                 Console.WriteLine("10%");
                 contax = Math.Ceiling(price * 0.1);
                 Console.WriteLine(price + contax);
