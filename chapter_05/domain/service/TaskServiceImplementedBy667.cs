@@ -72,20 +72,44 @@ namespace chapter_05.domain.service
         {
             string name;
             int age;
-            float height;
+            double height;
             string sex;
+            string age1;
+            string height1;
             Console.WriteLine("名前を入力してください");
             name = Console.ReadLine();
             Console.WriteLine("年齢を入力してください");
-            age = int.Parse(Console.ReadLine());
+            age1 = Console.ReadLine();
+            if (int.TryParse(age1, out age))
+            {
+            }
+            else
+            {
+                Console.WriteLine("数値以外が入力されています");
+            }
             Console.WriteLine("身長を入力してください");
-            height = float.Parse(Console.ReadLine());
+            height1 = Console.ReadLine();
+            if (double.TryParse(height1, out height))
+            {  
+            }
+            else
+            {
+                Console.WriteLine("数値以外が入力されています");
+            }
             Console.WriteLine("性別を入力してください");
             sex = Console.ReadLine();
+            if (sex.Equals("男") || sex.Equals("女"))
+            {
+            }
+            else
+            {
+                Console.WriteLine("男か女以外が入力されています");
+            }
             Console.WriteLine(name);
             Console.WriteLine(age);
             Console.WriteLine(height);
             Console.WriteLine(sex);
+
         }
         private void multiplication(int num)
         {
@@ -138,38 +162,47 @@ namespace chapter_05.domain.service
             {
                 Console.WriteLine(Era);
                 Console.WriteLine("3%");
-                contax = Math.Ceiling(price * 0.03);
+                contax = Math.Floor(price * 0.03);
                 Console.WriteLine(price + contax);
             }
             else if (year >= 1997 && year < 2014)
             {
                 Console.WriteLine(Era);
                 Console.WriteLine("5%");
-                contax = Math.Ceiling(price * 0.05);
+                contax = Math.Floor(price * 0.05);
                 Console.WriteLine(price + contax);
             }
             else if (year >= 2014 && year < 2019)
             {
                 Console.WriteLine(Era);
                 Console.WriteLine("8%");
-                contax = Math.Ceiling(price * 0.08);
+                contax = Math.Floor(price * 0.08);
                 Console.WriteLine(price + contax);
             }
             else if (year >= 2015)
             {
                 Console.WriteLine(Era);
                 Console.WriteLine("10%");
-                contax = Math.Ceiling(price * 0.1);
+                contax = Math.Floor(price * 0.1);
                 Console.WriteLine(price + contax);
             }
 
         }
         private void yourName()
         {
-            int count;
+            string count;
+            int num;
             Console.WriteLine("君の名は何回見た？");
-            count = int.Parse(Console.ReadLine());
-            Console.WriteLine(count + "回");
+            count = Console.ReadLine();
+            if(int.TryParse(count,out num))
+            {
+                Console.WriteLine(num + "回");
+            }
+            else
+            {
+                Console.WriteLine("数値以外が入力されています");
+            }
+            
 
         }
         private void yourName(string name)
