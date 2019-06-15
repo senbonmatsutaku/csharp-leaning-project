@@ -196,7 +196,7 @@ namespace chapter_05.domain.service
             count = Console.ReadLine();
             if(int.TryParse(count,out num))
             {
-                Console.WriteLine(count + "回");
+                Console.WriteLine(num + "回");
             }
             else
             {
