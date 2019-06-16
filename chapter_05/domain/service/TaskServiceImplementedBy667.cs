@@ -16,14 +16,23 @@ namespace chapter_05.domain.service
             int number;
             Console.Write("数字を入力してください>");
             number = int.Parse(Console.ReadLine());
-            multiplication(number);
+            if (number > 0 && number < 10)
+            {
+                multiplication(number);
+            }
+            else
+            {
+                Console.Write("有効範囲外です");
+            }
+            
         }
 
         public void LearnMethod3()
         {
             int year;
+            Console.Write("年数をを入力してください>");
             year = int.Parse(Console.ReadLine());
-            if (year > 1900 && year < 2021)
+            if (year > 1899 && year < 2021)
             {
                 Console.WriteLine(yearToEra(year));
             }
@@ -41,13 +50,13 @@ namespace chapter_05.domain.service
             year = int.Parse(Console.ReadLine());
             Console.Write("値段を入力してください>");
             price = int.Parse(Console.ReadLine());
-            if (year > 1900 && year < 2021)
+            if (year > 1899 && year < 2021)
             {
                 taxCalculation(year, price);
             }
             else
             {
-                Console.WriteLine("1900-2020の間ではありません");
+                Console.WriteLine("1900-2020の間ではありません。");
             }
         }
 
@@ -63,20 +72,44 @@ namespace chapter_05.domain.service
         {
             string name;
             int age;
-            int height;
+            double height;
             string sex;
+            string age1;
+            string height1;
             Console.WriteLine("名前を入力してください");
             name = Console.ReadLine();
             Console.WriteLine("年齢を入力してください");
-            age = int.Parse(Console.ReadLine());
+            age1 = Console.ReadLine();
+            if (int.TryParse(age1, out age))
+            {
+            }
+            else
+            {
+                Console.WriteLine("数値以外が入力されています");
+            }
             Console.WriteLine("身長を入力してください");
-            height = int.Parse(Console.ReadLine());
+            height1 = Console.ReadLine();
+            if (double.TryParse(height1, out height))
+            {  
+            }
+            else
+            {
+                Console.WriteLine("数値以外が入力されています");
+            }
             Console.WriteLine("性別を入力してください");
             sex = Console.ReadLine();
+            if (sex.Equals("男") || sex.Equals("女"))
+            {
+            }
+            else
+            {
+                Console.WriteLine("男か女以外が入力されています");
+            }
             Console.WriteLine(name);
             Console.WriteLine(age);
             Console.WriteLine(height);
             Console.WriteLine(sex);
+
         }
         private void multiplication(int num)
         {
@@ -85,9 +118,9 @@ namespace chapter_05.domain.service
             {
                 result[i-1] = num * i;
             }
-            foreach(int j in result)
+            for(int j=1; j <= 9; j++)
             {
-                Console.WriteLine(j);
+                Console.WriteLine(num + "の段の計算結果→" + num + "×" + j + "=" + result[j - 1]);
             }
         }
         private string yearToEra(int year)
@@ -117,48 +150,59 @@ namespace chapter_05.domain.service
         private void taxCalculation(int year,float price)
         {
             double contax;
+            string Era = yearToEra(year);
+
             if (year <= 1988)
             {
-                Console.WriteLine("明治");
+                Console.WriteLine(Era);
                 Console.WriteLine("0%");
                 Console.WriteLine(price);
             }
-            else if (year <= 1989)
+            else if (year >= 1989 && year < 1997)
             {
-                Console.WriteLine("大正");
+                Console.WriteLine(Era);
                 Console.WriteLine("3%");
-                contax = Math.Ceiling(price * 0.03);
+                contax = Math.Floor(price * 0.03);
                 Console.WriteLine(price + contax);
             }
-            else if (year <= 1997)
+            else if (year >= 1997 && year < 2014)
             {
-                Console.WriteLine("昭和");
+                Console.WriteLine(Era);
                 Console.WriteLine("5%");
-                contax = Math.Ceiling(price * 0.05);
+                contax = Math.Floor(price * 0.05);
                 Console.WriteLine(price + contax);
             }
-            else if (year <= 2014)
+            else if (year >= 2014 && year < 2019)
             {
-                Console.WriteLine("平成");
+                Console.WriteLine(Era);
                 Console.WriteLine("8%");
-                contax = Math.Ceiling(price * 0.08);
+                contax = Math.Floor(price * 0.08);
                 Console.WriteLine(price + contax);
             }
-            else
+            else if (year >= 2015)
             {
-                Console.WriteLine("令和");
+                Console.WriteLine(Era);
                 Console.WriteLine("10%");
-                contax = Math.Ceiling(price * 0.1);
+                contax = Math.Floor(price * 0.1);
                 Console.WriteLine(price + contax);
             }
 
         }
         private void yourName()
         {
-            int count;
+            string count;
+            int num;
             Console.WriteLine("君の名は何回見た？");
-            count = int.Parse(Console.ReadLine());
-            Console.WriteLine(count + "回");
+            count = Console.ReadLine();
+            if(int.TryParse(count,out num))
+            {
+                Console.WriteLine(num + "回");
+            }
+            else
+            {
+                Console.WriteLine("数値以外が入力されています");
+            }
+            
 
         }
         private void yourName(string name)
