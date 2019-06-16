@@ -1,5 +1,4 @@
-﻿using chapter_07.domain.service;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -73,30 +72,8 @@ namespace chapter_07.controller
             switch (employeeId)
             {
                 case 92:
-                    PaladinBy092 paladinBy092;
-                    paladinBy092 = new PaladinBy092();
-                    Console.WriteLine($"NAME: {paladinBy092.name}");
-                    Console.WriteLine($"LIFE: {paladinBy092.life}");
-                    Console.WriteLine($"MANA: {paladinBy092.mana}");
-                    Console.WriteLine("攻撃！");
-                    paladinBy092.Zeal();
-                    Console.WriteLine("オフェンシブオーラに切り替え！");
-                    paladinBy092.Fanaticism();
-                    Console.WriteLine("ディフェンシブオーラに切り替え！");
-                    paladinBy092.Meditation();
                     break;
                 case 667:
-                    //PaladinBy667 paladinBy667;
-                    //paladinBy667 = new PaladinBy667();
-                    //Console.WriteLine($"NAME: {paladinBy667.name}");
-                    //Console.WriteLine($"LIFE: {paladinBy667.life}");
-                    //Console.WriteLine($"MANA: {paladinBy667.mana}");
-                    //Console.WriteLine("攻撃！");
-                    //paladinBy667.Zeal();
-                    //Console.WriteLine("オフェンシブオーラに切り替え！");
-                    //paladinBy667.Fanaticism();
-                    //Console.WriteLine("ディフェンシブオーラに切り替え！");
-                    //paladinBy667.Meditation();
                     break;
                 default:
                     throw new ArgumentNullException($"{employeeId}さんのキャラクターは存在しません。");
