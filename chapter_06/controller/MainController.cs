@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using chapter_06.domain.service;
 
 namespace chapter_06.controller
 {
@@ -68,12 +69,14 @@ namespace chapter_06.controller
         {
             Console.WriteLine($"{employeeId}さんの人間クラス");
             Console.WriteLine("-------------------");
-
+            
             switch (employeeId)
             {
                 case 92:
                     break;
                 case 667:
+                    Human667 Human = new Human667();
+                    Human.selfIntroduction();
                     break;
                 default:
                     throw new ArgumentNullException($"{employeeId}さんの人間クラスは存在しません。");
