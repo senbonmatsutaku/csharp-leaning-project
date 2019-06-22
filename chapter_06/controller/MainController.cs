@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using chapter_06.domain.service;
 
 namespace chapter_06.controller
 {
@@ -66,8 +67,6 @@ namespace chapter_06.controller
 
         private static void MakeCharacter(int employeeId)
         {
-            chapter_06.domain.service.Human667 Human;
-            Human = new chapter_06.domain.service.Human667();
             Console.WriteLine($"{employeeId}さんの人間クラス");
             Console.WriteLine("-------------------");
             
@@ -76,6 +75,7 @@ namespace chapter_06.controller
                 case 92:
                     break;
                 case 667:
+                    Human667 Human = new Human667();
                     Human.selfIntroduction();
                     break;
                 default:
