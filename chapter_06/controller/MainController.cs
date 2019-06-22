@@ -1,5 +1,4 @@
-﻿using chapter_06.domain.service;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -67,39 +66,20 @@ namespace chapter_06.controller
 
         private static void MakeCharacter(int employeeId)
         {
-            Console.WriteLine($"{employeeId}さんの聖騎士");
+            chapter_06.domain.service.Human667 Human;
+            Human = new chapter_06.domain.service.Human667();
+            Console.WriteLine($"{employeeId}さんの人間クラス");
             Console.WriteLine("-------------------");
-
+            
             switch (employeeId)
             {
                 case 92:
-                    PaladinBy092 paladinBy092;
-                    paladinBy092 = new PaladinBy092();
-                    Console.WriteLine($"NAME: {paladinBy092.name}");
-                    Console.WriteLine($"LIFE: {paladinBy092.life}");
-                    Console.WriteLine($"MANA: {paladinBy092.mana}");
-                    Console.WriteLine("攻撃！");
-                    paladinBy092.Zeal();
-                    Console.WriteLine("オフェンシブオーラに切り替え！");
-                    paladinBy092.Fanaticism();
-                    Console.WriteLine("ディフェンシブオーラに切り替え！");
-                    paladinBy092.Meditation();
                     break;
                 case 667:
-                    //PaladinBy667 paladinBy667;
-                    //paladinBy667 = new PaladinBy667();
-                    //Console.WriteLine($"NAME: {paladinBy667.name}");
-                    //Console.WriteLine($"LIFE: {paladinBy667.life}");
-                    //Console.WriteLine($"MANA: {paladinBy667.mana}");
-                    //Console.WriteLine("攻撃！");
-                    //paladinBy667.Zeal();
-                    //Console.WriteLine("オフェンシブオーラに切り替え！");
-                    //paladinBy667.Fanaticism();
-                    //Console.WriteLine("ディフェンシブオーラに切り替え！");
-                    //paladinBy667.Meditation();
+                    Human.selfIntroduction();
                     break;
                 default:
-                    throw new ArgumentNullException($"{employeeId}さんのキャラクターは存在しません。");
+                    throw new ArgumentNullException($"{employeeId}さんの人間クラスは存在しません。");
             }
         }
     }
