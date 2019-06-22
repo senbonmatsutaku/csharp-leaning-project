@@ -66,14 +66,17 @@ namespace chapter_06.controller
 
         private static void MakeCharacter(int employeeId)
         {
+            chapter_06.domain.service.Human667 Human;
+            Human = new chapter_06.domain.service.Human667();
             Console.WriteLine($"{employeeId}さんの人間クラス");
             Console.WriteLine("-------------------");
-
+            
             switch (employeeId)
             {
                 case 92:
                     break;
                 case 667:
+                    Human.selfIntroduction();
                     break;
                 default:
                     throw new ArgumentNullException($"{employeeId}さんの人間クラスは存在しません。");
