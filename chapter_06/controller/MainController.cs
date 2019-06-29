@@ -23,11 +23,11 @@ namespace chapter_06.controller
                     }
                     else if (!IsValidEmployeeId(employeeId))
                     {
-                        Console.WriteLine($"社員番号 {employeeId} さんは課題実施対象者ではありません。");
+                        Console.WriteLine($"社員番号 {employeeId}さんは課題実施対象者ではありません。");
                     }
                     else
                     {
-                        Console.WriteLine($"{employeeId} さんの課題を確認します。");
+                        Console.WriteLine($"{employeeId}さんの課題を確認します。");
                         MakeCharacter(employeeId);
                         break;
                     }
@@ -73,6 +73,8 @@ namespace chapter_06.controller
             switch (employeeId)
             {
                 case 92:
+                    var human = new Human092();
+                    human.SelfIntroduction();
                     break;
                 case 667:
                     Human667 Human = new Human667();
