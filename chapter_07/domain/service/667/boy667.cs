@@ -7,12 +7,28 @@ namespace chapter_07.domain.service._667
     class boy667
     {
         public string name;
-        public string age;
-        public boy667(string name,string age)
+        public int age;
+        public string Default_name = "一本松　匠";
+        public int Default_age = 10;
+        public boy667():this("一本松 匠",10)
+        {
+        }
+        public boy667(string name) : this(name, 10)
+        {
+            this.name = name;
+            this.age = Default_age;
+        }
+        public boy667(int age) : this("一本松 匠", age)
+        {
+            this.name = Default_name;
+            this.age = age;
+        }
+        public boy667(string name, int age)
         {
             this.name = name;
             this.age = age;
         }
+
         public void prologue()
         {
             Console.WriteLine("僕の名前は" + this.name);
