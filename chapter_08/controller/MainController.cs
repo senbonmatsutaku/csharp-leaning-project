@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using chapter_07.domain.service._667;
+using chapter_08.domain.service._667;
 
-namespace chapter_07.controller
+namespace chapter_08.controller
 {
     class MainController
     {
@@ -67,7 +67,7 @@ namespace chapter_07.controller
 
         private static void MakeCharacter(int employeeId)
         {
-            Console.WriteLine($"{employeeId}さんの聖騎士");
+            Console.WriteLine($"{employeeId} さんの課題");
             Console.WriteLine("-------------------");
 
             switch (employeeId)
@@ -75,12 +75,11 @@ namespace chapter_07.controller
                 case 92:
                     break;
                 case 667:
-                    boy667 boy = new boy667("A");
-                    boy.prologue();
-                    boy.specialTraining(5);
+                    boy667 boy = new boy667();
+                    boy.age = 10;
                     break;
                 default:
-                    throw new ArgumentNullException($"{employeeId}さんのキャラクターは存在しません。");
+                    throw new ArgumentNullException($"{employeeId}さんの課題は存在しません。");
             }
         }
     }
