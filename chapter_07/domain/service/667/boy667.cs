@@ -23,6 +23,7 @@ namespace chapter_07.domain.service._667
         {
             name = Default_name;
             age = Age;
+
         }
         public boy667(string name, int age)
         {
