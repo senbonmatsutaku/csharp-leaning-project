@@ -14,7 +14,7 @@ namespace chapter_07.domain.service._667
         public boy667():this(Default_name, Default_age)
         {
         }
-        public boy667(string name)
+        public boy667(string name):this(Default_age)
         {
             this.name = name;
             this.age = Default_age;
