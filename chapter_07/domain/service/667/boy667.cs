@@ -11,26 +11,20 @@ namespace chapter_07.domain.service._667
         private static string Default_name = "一本松　匠";
         private static int Default_age = 10;
 
-        public boy667():this(Default_name, Default_age)
+        public boy667() : this(Default_name, Default_age)
         {
         }
-        public boy667(string Name) : this(Default_age)
+        public boy667(string name) : this(name, Default_age)
         {
-            name = Name;
-            age = Default_age;
         }
-        public boy667(int Age)
+        public boy667(int age) : this(Default_name, age)
         {
-            name = Default_name;
-            age = Age;
-
         }
         public boy667(string name, int age)
         {
             this.name = name;
             this.age = age;
         }
-
         public void prologue()
         {
             Console.WriteLine("僕の名前は" + this.name);
