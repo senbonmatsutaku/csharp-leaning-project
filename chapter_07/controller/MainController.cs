@@ -75,7 +75,7 @@ namespace chapter_07.controller
                 case 92:
                     break;
                 case 667:
-                    boy667 boy = new boy667("たく",3);
+                    boy667 boy = new boy667();
                     boy.prologue();
                     boy.specialTraining(5);
                     break;

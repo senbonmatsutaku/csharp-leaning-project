@@ -14,15 +14,16 @@ namespace chapter_07.domain.service._667
         public boy667():this(Default_name, Default_age)
         {
         }
-        public boy667(string name):this(Default_age)
+        public boy667(string Name) : this(Default_age)
         {
-            this.name = name;
-            this.age = Default_age;
+            name = Name;
+            age = Default_age;
         }
-        public boy667(int age)
+        public boy667(int Age)
         {
-            this.name = Default_name;
-            this.age = age;
+            name = Default_name;
+            age = Age;
+
         }
         public boy667(string name, int age)
         {
