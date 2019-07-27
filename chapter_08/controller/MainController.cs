@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using chapter_08.domain.service._667;
 
 namespace chapter_08.controller
 {
@@ -74,6 +75,11 @@ namespace chapter_08.controller
                 case 92:
                     break;
                 case 667:
+                    boy667 boy = new boy667();
+                    boy.SetName("");
+                    boy.SetAge(100);
+                    Console.WriteLine("私の名前は"+boy.getName() +"です");
+                    Console.WriteLine("年齢は" + boy.GetAge() + "です");
                     break;
                 default:
                     throw new ArgumentNullException($"{employeeId}さんの課題は存在しません。");
