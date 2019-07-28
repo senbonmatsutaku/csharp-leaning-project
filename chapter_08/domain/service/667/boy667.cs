@@ -6,19 +6,43 @@ namespace chapter_08.domain.service._667
 {
     class boy667
     {
-        public const  int final_MIN_AGE = 0;
-        public const int final_MAX_AGE = 100;
+        public int final_MIN_AGE = 0;
+        public int final_MAX_AGE = 100;
         public string name;
         public int age;
-        public string Name
+        public string getName()
         {
-            get { return name; }
-            set { name = value; }
+            return this.name;
         }
-        public int Age
+        public string SetName(string name)
         {
-            get { return age; }
-            set { age = value; }
+            if (name == "")
+            {
+                Console.WriteLine("引数エラーです");
+                this.name = name;
+            }
+            else
+            {
+                this.name = name;
+            }
+            return this.name;
+        }
+        public int GetAge()
+        {
+            return this.age;
+        }
+        public int SetAge(int age)
+        {
+            if(age < final_MIN_AGE || age > final_MAX_AGE)
+            {
+                Console.WriteLine("引数エラーです");
+                this.age = age;
+            }
+            else
+            {
+                this.age = age;
+            }
+            return this.age;
         }
     }
 }
