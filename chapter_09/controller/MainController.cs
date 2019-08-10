@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using chapter_09.domain.service._667;
 
 namespace chapter_09.controller
 {
@@ -74,6 +75,11 @@ namespace chapter_09.controller
                 case 92:
                     break;
                 case 667:
+                    HighschoolBoy667 HighschoolBoy = new HighschoolBoy667();
+                    HighschoolBoy.SetSignatureMove("野球拳");
+                    HighschoolBoy.rememberMyDream();
+                    HighschoolBoy.specialTraining();
+                    HighschoolBoy.boast(HighschoolBoy.getSignatureMove());
                     break;
                 default:
                     throw new ArgumentNullException($"{employeeId}さんの課題は存在しません。");
