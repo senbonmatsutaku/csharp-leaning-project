@@ -139,8 +139,8 @@ namespace chapter_09.domain.service._667
             else
             {
                 Console.WriteLine("1.2のどちらでもありません");
+
             }
-            boy.specialTraining(5);
         }
         public void boast(string SignatureMove)
         {
