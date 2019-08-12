@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using chapter_09.domain.service._667;
+using chapter_09.domain.service.student667;
 
 namespace chapter_09.controller
 {
