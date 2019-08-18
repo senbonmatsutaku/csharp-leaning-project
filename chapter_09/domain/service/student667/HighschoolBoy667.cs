@@ -8,79 +8,78 @@ namespace chapter_09.domain.service.student667
     class HighschoolBoy667 : boy667
     {
         string SignatureMove;
-        public string getSignatureMove()
+        public string GetSignatureMove()
         {
             return this.SignatureMove;
         }
-        public string SetSignatureMove(string SignatureMove)
+        public void SetSignatureMove(string SignatureMove)
         {
             this.SignatureMove = SignatureMove;
-            return this.SignatureMove;
         }
-        public void rememberMyDream()
+        public void RememberMyDream()
         {
-            boy667 boy = new boy667();
-            boy.SetName("a");
-            boy.SetAge(1);
-            boy.prologue();
+            SetName("sss");
+            SetAge(10);
+            prologue();
         }
-        public void specialTraining()
+        public void SpecialTraining()
         {
-            boy667 boy = new boy667();
             string seltraining;
+            string trainingcnt;
+            int trainingcnt1;
             Console.WriteLine("トレーニングを実施　1:高校時代 2:少年時代");
             seltraining = Console.ReadLine();
             if (seltraining == "1")
             {
-                specialTrainingplus(3);
+                Console.WriteLine("数値を入力してください");
+                trainingcnt = Console.ReadLine();
+                if (int.TryParse(trainingcnt, out trainingcnt1))
+                {
+                    SpecialTrainingPlus(int.Parse(trainingcnt));
+                }
+                else
+                {
+                    Console.WriteLine("数値を代入してください");
+                }
             }
             else if (seltraining == "2")
             {
-                boy.specialTraining(5);
+                Console.WriteLine("トレーニング回数を入力してください");
+                trainingcnt = Console.ReadLine();
+                if (int.TryParse(trainingcnt, out trainingcnt1))
+                {
+                    specialTraining(int.Parse(trainingcnt));
+                }
+                else
+                {
+                    Console.WriteLine("数値を代入してください");
+                }
             }
             else
             {
                 Console.WriteLine("1.2のどちらでもありません");
-
             }
         }
-        public void boast(string SignatureMove)
+        public void SpecialTrainingPlus(int tracnt)
         {
-            Console.WriteLine("得意技は" + SignatureMove + "です");
-        }
-        public void specialTrainingplus(int battingbnt)
-        {
-            int course;
-            int hitcnt = 0;
-            int strikhit = 0;
-            Console.WriteLine("まずは素振り" + battingbnt + "回！");
-            for (int i = 0; i < battingbnt; i++)
+            System.Random r = new System.Random();
+            Console.WriteLine("まずは素振り" + tracnt + "回！");
+            int runrange = r.Next(1, 10);
+            Console.WriteLine("終わったら" + tracnt + "kmの走り込みだ！");
+            Console.WriteLine("～～走り込み中～～");
+            if (runrange % 2 == 0)
             {
-                System.Random r = new System.Random();
-                int courseRand = r.Next(1, 3);
-                Console.WriteLine("ビュッ！");
-                Console.WriteLine("1:内角、2:外角、3:ド真ん中");
-                course = int.Parse(Console.ReadLine());
-                if (course == courseRand)
-                {
-                    Console.WriteLine("HIT！");
-                    hitcnt = hitcnt + 1;
-                }
-                else
-                {
-                    Console.WriteLine("ストライク！");
-                    strikhit = strikhit + 1;
-                }
-                Console.WriteLine("ループを強制的に抜けるにはqを入力してください");
-                string loopbreak;
-                loopbreak = Console.ReadLine();
-                if (loopbreak == "q")
-                {
-                    break;
-                }
+                Console.WriteLine("達成できなかったから明日こそは頑張ろう！");
             }
-            Console.WriteLine("HIT数" + hitcnt);
-            Console.WriteLine("ストライク数" + strikhit);
+            else
+            {
+                Console.WriteLine("達成できたから明日は今日よりもいっぱい走ろう");
+            }
+            Console.WriteLine("今日もいっぱい頑張ったしそろそろ終わろうかな！");
+        }
+        public void Boast()
+        {
+            Console.WriteLine("得意技は" + GetSignatureMove() + "です");
         }
     }
 }
