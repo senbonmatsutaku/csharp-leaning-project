@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace chapter_07.domain.service._667
+namespace chapter_09.domain.service._667
 {
     class boy667
     {
         public string name;
         public int age;
+        public int final_MIN_AGE = 0;
+        public int final_MAX_AGE = 100;
         private static string Default_name = "一本松　匠";
         private static int Default_age = 10;
 
@@ -24,6 +26,40 @@ namespace chapter_07.domain.service._667
         {
             this.name = name;
             this.age = age;
+        }
+        public string getName()
+        {
+            return this.name;
+        }
+        public string SetName(string name)
+        {
+            if (name == "")
+            {
+                Console.WriteLine("引数エラーです");
+                this.name = name;
+            }
+            else
+            {
+                this.name = name;
+            }
+            return this.name;
+        }
+        public int GetAge()
+        {
+            return this.age;
+        }
+        public int SetAge(int age)
+        {
+            if (age < final_MIN_AGE || age > final_MAX_AGE)
+            {
+                Console.WriteLine("引数エラーです");
+                this.age = age;
+            }
+            else
+            {
+                this.age = age;
+            }
+            return this.age;
         }
         public void prologue()
         {
