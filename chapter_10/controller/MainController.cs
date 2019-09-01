@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using chapter_09.domain.service.student667;
+using chapter_10.domain.service.student667;
 
-namespace chapter_09.controller
+namespace chapter_10.controller
 {
     class MainController
     {
@@ -75,7 +75,12 @@ namespace chapter_09.controller
                 case 92:
                     break;
                 case 667:
-
+                    IManagement Management = new MyManagement();
+                    Management.story();
+                    Management.Stocking();
+                    Management.Order();
+                    Management.TodaySales();
+                    break;
                 default:
                     throw new ArgumentNullException($"{employeeId}さんの課題は存在しません。");
             }
