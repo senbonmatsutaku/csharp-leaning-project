@@ -75,11 +75,8 @@ namespace chapter_10.controller
                 case 92:
                     break;
                 case 667:
-                    IManagement Management = new MyManagement();
-                    Management.story();
-                    Management.Stocking();
-                    Management.Order();
-                    Management.TodaySales();
+                    ITask task = new MyTask();
+                    task.Run();
                     break;
                 default:
                     throw new ArgumentNullException($"{employeeId}さんの課題は存在しません。");

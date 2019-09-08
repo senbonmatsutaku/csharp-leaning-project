@@ -6,9 +6,9 @@ namespace chapter_10.domain.service.student667
 {
     class Foodstuff
     {
-        public int Fish = 100;
-        public int Meat = 100;
-        public int SideDish = 200;
-        public int Rice = 300;
+        public int Fish;
+        public int Meat;
+        public int SideDish;
+        public int Rice;
     }
 }

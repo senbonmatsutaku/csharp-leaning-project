@@ -6,27 +6,19 @@ namespace chapter_10.domain.service.student667
 {
     interface ITask
     {
-        void run();
+        void Run();
     }
     class MyTask : ITask
     {
-        public void run()
+        public void Run()
         {
-            void story()
-            {
-            }
-            void Stocking()
-            {
+            IManagement management = new AManagement();
+            Foodstuff food = new Foodstuff();
+            management.story();
+            management.Stocking(food);
+            management.Order(food);
+            management.TodaySales();
 
-            }
-            void Order()
-            {
-
-            }
-            void TodaySales()
-            {
-
-            }
         }
     }
 }
