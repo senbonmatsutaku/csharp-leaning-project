@@ -7,17 +7,11 @@ namespace chapter_10.domain.service.student667
     interface IManagement
     {
         void story();
-        void Stocking();
-        void Order();
+        void Stocking(Foodstuff food);
+        void Order(Foodstuff food);
         void TodaySales();
     }
-    enum Menu
-    {
-        のり弁当,
-        チキン南蛮,
-        カツカレー
-    }
-    class AManagement : Foodstuff,IManagement
+    class AManagement : IManagement
     {
         int sales;
         public void story()
@@ -27,49 +21,47 @@ namespace chapter_10.domain.service.student667
             Console.WriteLine("今日もたくさんの学生が弁当を買いに来るはずだ。  ");
             Console.WriteLine("高校生がお腹をすかせないよう、しっかり仕込んで、たくさん売るぞ！。  ");
         }
-        public void Stocking()
+        public void Stocking(Foodstuff food)
         {
+            System.Random r = new System.Random();
+            int random = r.Next(1, 100);
             Console.WriteLine("魚を調達した。");
-            Fish = 100;
+            food.Fish = random;
             Console.WriteLine("肉を調達した。");
-            Meat = 100;
+            food.Meat = random;
             Console.WriteLine("惣菜を調達した。");
-            SideDish = 200;
+            random = r.Next(1, 200);
+            food.SideDish = random;
             Console.WriteLine("ごはんを調達した。");
-            Rice = 300;
-
+            random = r.Next(1, 300);
+            food.Rice = random;
         }
-        public void Order()
+        public void Order(Foodstuff food)
         {
             while (true)
             {
                 System.Random r = new System.Random();
                 int random = r.Next(1, 3);
+
                 switch (random)
                 {
-                    case (int)Menu.のり弁当:
+                    case 1:
                         Console.WriteLine("のり弁当が注文されました。");
-                        Rice = Rice - 100;
-                        Fish = Fish - 50;
-                        Meat = Meat - 50;
-                        sales = sales + 500;
+                        NoriBento noriben = new NoriBento();
+                        sales = noriben.Cook(food);
                         break;
-                    case (int)Menu.チキン南蛮:
+                    case 2:
                         Console.WriteLine("チキン南蛮が注文されました。");
-                        Rice = Rice - 100;
-                        SideDish = SideDish - 50;
-                        Meat = Meat - 50;
-                        sales = sales + 600;
+                        ChikenNanban nanban = new ChikenNanban();
+                        sales = nanban.Cook(food);
                         break;
-                    case (int)Menu.カツカレー:
+                    case 3:
                         Console.WriteLine("カツカレーが注文されました。");
-                        Rice = Rice - 100;
-                        SideDish = SideDish - 50;
-                        Meat = Meat - 50;
-                        sales = sales + 700;
+                        KatuCurry curry = new KatuCurry();
+                        sales = curry.Cook(food);
                         break;
                 }
-                if (Rice <= 0 || SideDish <= 0 || Meat <= 0 || Fish <= 0)
+                if (food.Rice <= 0 || food.Meat <= 0 || food.Fish <= 0 || food.SideDish <= 0)
                 {
                     break;
                 }
@@ -77,7 +69,6 @@ namespace chapter_10.domain.service.student667
         }
         public void TodaySales()
         {
-            AManagement Management = new AManagement();
             Console.WriteLine("本日の売り上げは" + sales + "円です。");
         }
     }
