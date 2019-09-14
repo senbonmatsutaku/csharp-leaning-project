@@ -13,7 +13,7 @@ using System.Text;
  */
 namespace chapter_13.domain.service
 {
-    interface ITask
+    public interface ITask
     {
         // 以下の条件とマッチする正規表現パターンを作成して、引数の文字列がマッチ/アンマッチかをtrue/falseで判定するメソッドを作成せよ
 
