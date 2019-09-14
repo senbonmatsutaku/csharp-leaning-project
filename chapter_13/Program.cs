@@ -1,4 +1,5 @@
-﻿using System;
+﻿using chapter_13.controller;
+using System;
 
 namespace chapter_13
 {
@@ -6,7 +7,7 @@ namespace chapter_13
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MainController.Run();
         }
     }
 }

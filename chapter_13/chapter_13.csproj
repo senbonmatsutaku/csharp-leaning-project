@@ -5,10 +5,4 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="controller\" />
-    <Folder Include="domain\service\student092\" />
-    <Folder Include="domain\service\student667\" />
-  </ItemGroup>
-
 </Project>
