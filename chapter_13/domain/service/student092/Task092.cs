@@ -4,7 +4,7 @@ using System.Text;
 
 namespace chapter_13.domain.service.student092
 {
-    class Task092 : ITask
+    public class Task092 : ITask
     {
         public bool Task1(string s)
         {
