@@ -1,26 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static chapter_10.domain.service.student667.ABento;
+using static chapter_10.domain.service.student667.menu;
 
 namespace chapter_10.domain.service.student667
 {
-    public class NoriBento : ABento
+    class NoriBen : ABento
     {
-        internal int Cook(Foodstuff f)
+        public override int FishUsage
         {
-            try
+            get
             {
-                f.Rice -= 100;
-                f.SideDish -= 50;
-                f.Fish -= 50;
-            }
-            catch
-            {
-                Console.WriteLine("材料が切れました。");
                 return 0;
             }
-            Console.WriteLine("のり弁当が売れました。");
-            return 500;
+        }
+
+        public override int MeatUsage
+        {
+            get
+            {
+                return 50;
+            }
+        }
+
+        public override string name
+        {
+            get
+            {
+                return BentoMenu.のり弁当.ToString();
+            }
+        }
+
+        public override int Price
+        {
+            get
+            {
+                return 700;
+            }
+        }
+
+        public override int SidedishUsage
+        {
+            get
+            {
+                return 50;
+            }
+        }
+        public override int Rice
+        {
+            get
+            {
+                return 100;
+            }
         }
     }
 }

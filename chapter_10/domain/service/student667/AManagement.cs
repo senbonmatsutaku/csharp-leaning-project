@@ -1,16 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static chapter_10.domain.service.student667.interface_;
 
 namespace chapter_10.domain.service.student667
 {
-    interface IManagement
-    {
-        void story();
-        void Stocking(Foodstuff food);
-        void Order(Foodstuff food);
-        void TodaySales();
-    }
     class AManagement : IManagement
     {
         int sales;
@@ -21,20 +15,22 @@ namespace chapter_10.domain.service.student667
             Console.WriteLine("今日もたくさんの学生が弁当を買いに来るはずだ。  ");
             Console.WriteLine("高校生がお腹をすかせないよう、しっかり仕込んで、たくさん売るぞ！。  ");
         }
-        public void Stocking(Foodstuff food)
+        public Foodstuff Stocking()
         {
+            Foodstuff food = new Foodstuff();
             System.Random r = new System.Random();
-            int random = r.Next(1, 100);
+            int random = r.Next(50, 100);
             Console.WriteLine("魚を調達した。");
             food.Fish = random;
             Console.WriteLine("肉を調達した。");
             food.Meat = random;
             Console.WriteLine("惣菜を調達した。");
-            random = r.Next(1, 200);
+            random = r.Next(100, 200);
             food.SideDish = random;
             Console.WriteLine("ごはんを調達した。");
-            random = r.Next(1, 300);
+            random = r.Next(100, 300);
             food.Rice = random;
+            return food;
         }
         public void Order(Foodstuff food)
         {
@@ -42,27 +38,35 @@ namespace chapter_10.domain.service.student667
             {
                 System.Random r = new System.Random();
                 int random = r.Next(1, 3);
-
                 switch (random)
                 {
                     case 1:
-                        Console.WriteLine("のり弁当が注文されました。");
-                        NoriBento noriben = new NoriBento();
-                        sales = noriben.Cook(food);
+                        NoriBen noriben = new NoriBen();
+                        food.Rice -= noriben.Rice;
+                        food.SideDish -= noriben.SidedishUsage;
+                        food.Fish -= noriben.FishUsage;
+                        sales += noriben.Price;
+                        Console.WriteLine(noriben.name + "が注文されました");
                         break;
                     case 2:
-                        Console.WriteLine("チキン南蛮が注文されました。");
                         ChikenNanban nanban = new ChikenNanban();
-                        sales = nanban.Cook(food);
+                        food.Rice -= nanban.Rice;
+                        food.SideDish -= nanban.SidedishUsage;
+                        food.Meat -= nanban.MeatUsage;
+                        sales += nanban.Price;
+                        Console.WriteLine(nanban.name + "が注文されました");
                         break;
                     case 3:
-                        Console.WriteLine("カツカレーが注文されました。");
                         KatuCurry curry = new KatuCurry();
-                        sales = curry.Cook(food);
+                        food.Rice -= curry.Rice;
+                        food.SideDish -= curry.SidedishUsage;
+                        sales += curry.Price;
+                        Console.WriteLine(curry.name + "が注文されました");
                         break;
                 }
                 if (food.Rice <= 0 || food.Meat <= 0 || food.Fish <= 0 || food.SideDish <= 0)
                 {
+                    Console.WriteLine("材料がなくなりました。");
                     break;
                 }
             }
