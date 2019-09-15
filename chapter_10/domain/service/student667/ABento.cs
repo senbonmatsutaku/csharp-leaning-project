@@ -6,10 +6,11 @@ namespace chapter_10.domain.service.student667
 {
     public abstract class ABento
     {
-        protected string Name { get; set; }
-        protected int FishUsage { get; set; }
-        protected int MeatUsage { get; set; }
-        protected int SidedishUsage { get; set; }
-        protected int Price { get; set; }
+        abstract public string name { get; }
+        abstract public int FishUsage { get; }
+        abstract public int MeatUsage { get; }
+        abstract public int SidedishUsage { get; }
+        abstract public int Rice { get; }
+        abstract public int Price { get; }
     }
 }

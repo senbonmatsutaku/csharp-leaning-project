@@ -4,7 +4,7 @@ using System.Text;
 
 namespace chapter_10.domain.service.student667
 {
-    class Foodstuff
+    public class Foodstuff
     {
         public int Fish;
         public int Meat;

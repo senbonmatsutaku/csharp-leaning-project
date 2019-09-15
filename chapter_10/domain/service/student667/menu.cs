@@ -4,11 +4,11 @@ using System.Text;
 
 namespace chapter_10.domain.service.student667
 {
-    //他ファイルからこのEnumが参照できません
-    public enum BentoMenu : int
+    public static class menu
     {
-        のり弁当,
-        チキン南蛮,
-        カツカレー
+        public enum BentoMenu
+        {
+            のり弁当, チキン南蛮, カツカレー
+        }
     }
 }
