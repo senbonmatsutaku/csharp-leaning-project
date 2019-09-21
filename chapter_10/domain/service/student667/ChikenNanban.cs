@@ -8,52 +8,11 @@ namespace chapter_10.domain.service.student667
 {
     class ChikenNanban : ABento
     {
-        public override int FishUsage
-        {
-            get
-            {
-                return 0;
-            }
-        }
-
-        public override int MeatUsage
-        {
-            get
-            {
-                return 50;
-            }
-        }
-
-        public override string name
-        {
-            get
-            {
-                return BentoMenu.チキン南蛮.ToString();
-            }
-        }
-
-        public override int Price
-        {
-            get
-            {
-                return 500;
-            }
-        }
-
-        public override int Rice
-        {
-            get
-            {
-                return 100;
-            }
-        }
-
-        public override int SidedishUsage
-        {
-            get
-            {
-                return 50;
-            }
-        }
+        public override string name => BentoMenu.チキン南蛮.ToString();
+        public override int FishUsage => 0;
+        public override int MeatUsage => 20;
+        public override int SidedishUsage => 20;
+        public override int Rice => 10;
+        public override int Price => 450;
     }
 }
