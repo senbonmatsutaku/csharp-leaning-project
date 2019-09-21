@@ -4,8 +4,6 @@ using System.Text;
 
 namespace chapter_10.domain.service.student667
 {
-    public static class interface_
-    {
         public interface IManagement
         {
             void story();
@@ -17,5 +15,4 @@ namespace chapter_10.domain.service.student667
         {
             void Run();
         }
-    }
 }

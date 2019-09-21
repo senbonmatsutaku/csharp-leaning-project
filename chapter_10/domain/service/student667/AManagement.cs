@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static chapter_10.domain.service.student667.interface_;
+using static chapter_10.domain.service.student667.menu;
 
 namespace chapter_10.domain.service.student667
 {
@@ -19,16 +19,16 @@ namespace chapter_10.domain.service.student667
         {
             Foodstuff food = new Foodstuff();
             System.Random r = new System.Random();
-            int random = r.Next(50, 100);
+            int random = r.Next(100, 100);
             Console.WriteLine("魚を調達した。");
             food.Fish = random;
             Console.WriteLine("肉を調達した。");
             food.Meat = random;
             Console.WriteLine("惣菜を調達した。");
-            random = r.Next(100, 200);
+            random = r.Next(200, 200);
             food.SideDish = random;
             Console.WriteLine("ごはんを調達した。");
-            random = r.Next(100, 300);
+            random = r.Next(300, 300);
             food.Rice = random;
             return food;
         }
@@ -40,7 +40,7 @@ namespace chapter_10.domain.service.student667
                 int random = r.Next(1, 3);
                 switch (random)
                 {
-                    case 1:
+                    case (int)BentoMenu.のり弁当:
                         NoriBen noriben = new NoriBen();
                         food.Rice -= noriben.Rice;
                         food.SideDish -= noriben.SidedishUsage;
@@ -48,7 +48,7 @@ namespace chapter_10.domain.service.student667
                         sales += noriben.Price;
                         Console.WriteLine(noriben.name + "が注文されました");
                         break;
-                    case 2:
+                    case (int)BentoMenu.チキン南蛮:
                         ChikenNanban nanban = new ChikenNanban();
                         food.Rice -= nanban.Rice;
                         food.SideDish -= nanban.SidedishUsage;
@@ -56,7 +56,7 @@ namespace chapter_10.domain.service.student667
                         sales += nanban.Price;
                         Console.WriteLine(nanban.name + "が注文されました");
                         break;
-                    case 3:
+                    case (int)BentoMenu.カツカレー:
                         KatuCurry curry = new KatuCurry();
                         food.Rice -= curry.Rice;
                         food.SideDish -= curry.SidedishUsage;

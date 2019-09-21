@@ -8,51 +8,11 @@ namespace chapter_10.domain.service.student667
 {
     class KatuCurry : ABento
     {
-        public override int FishUsage
-        {
-            get
-            {
-                return 0;
-            }
-        }
-
-        public override int MeatUsage
-        {
-            get
-            {
-                return 50;
-            }
-        }
-
-        public override string name
-        {
-            get
-            {
-                return BentoMenu.カツカレー.ToString();
-            }
-        }
-
-        public override int Price
-        {
-            get
-            {
-                return 700;
-            }
-        }
-
-        public override int SidedishUsage
-        {
-            get
-            {
-                return 50;
-            }
-        }
-        public override int Rice
-        {
-            get
-            {
-                return 100;
-            }
-        }
+        public override string name => BentoMenu.カツカレー.ToString();
+        public override int FishUsage => 10;
+        public override int MeatUsage => 10;
+        public override int Price => 510;
+        public override int Rice => 30;
+        public override int SidedishUsage => 30;
     }
 }
