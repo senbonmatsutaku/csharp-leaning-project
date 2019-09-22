@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using chapter_10.domain.service.student667;
 
 namespace chapter_10.controller
 {
@@ -74,6 +75,8 @@ namespace chapter_10.controller
                 case 92:
                     break;
                 case 667:
+                    ITask task = new MyTask();
+                    task.Run();
                     break;
                 default:
                     throw new ArgumentNullException($"{employeeId}さんの課題は存在しません。");

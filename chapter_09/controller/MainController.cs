@@ -75,12 +75,7 @@ namespace chapter_09.controller
                 case 92:
                     break;
                 case 667:
-                    HighschoolBoy667 HighschoolBoy = new HighschoolBoy667();
-                    HighschoolBoy.SetSignatureMove("野球拳");
-                    HighschoolBoy.RememberMyDream();
-                    HighschoolBoy.SpecialTraining();
-                    HighschoolBoy.Boast();
-                    break;
+
                 default:
                     throw new ArgumentNullException($"{employeeId}さんの課題は存在しません。");
             }
