@@ -48,7 +48,7 @@ namespace chapter_11.domain.service.student667
 
         public void Task4()
         {
-                StreamReader Reader = File.OpenText("A.txt");
+            throw new FileNotFoundException();
         }
     }
 }
