@@ -15,10 +15,7 @@ namespace chapter_12.domain.service.student667
 
         public void Task2()
         {
-            YutoriKun yutori = new YutoriKun();
-            yutori.study();
-            ExitYutoriSan exYutori = new ExitYutoriSan();
-            exYutori.study();
+            return;
         }
     }
     
