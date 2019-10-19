@@ -8,12 +8,18 @@ namespace chapter_12.domain.service.student667
     {
         public void Task1()
         {
-            return;
+            StrongBox<int> box = new StrongBox<int>();
+            box.put(2);
+            Console.WriteLine(box.get());
         }
 
         public void Task2()
         {
-            return;
+            YutoriKun yutori = new YutoriKun();
+            yutori.study();
+            ExitYutoriSan exYutori = new ExitYutoriSan();
+            exYutori.study();
         }
     }
+    
 }
