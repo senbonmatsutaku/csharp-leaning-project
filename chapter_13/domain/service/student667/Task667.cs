@@ -9,7 +9,7 @@ namespace chapter_13.domain.service.student667
     {
         public bool Task1(string s)
         {
-            if (Regex.IsMatch(s, "すべての文字列"))
+            if (Regex.IsMatch(s, "[a-zA-Z0-9ぁ-んァ-ヴｦ-ﾟ]"))
             {
                 return true;
             }
@@ -21,7 +21,7 @@ namespace chapter_13.domain.service.student667
 
         public bool Task2(string s)
         {
-            if (Regex.IsMatch(s, "^Ａ[0-9][0-9]"))
+            if (Regex.IsMatch(s, "^A[0-9][0-9]"))
             {
                 return true;
             }
@@ -33,7 +33,7 @@ namespace chapter_13.domain.service.student667
 
         public bool Task3(string s)
         {
-            if (Regex.IsMatch(s, "^Ｕ[A-Z]{3}"))
+            if (Regex.IsMatch(s, "^[A-Z]{3}"))
             {
                 return true;
             }
