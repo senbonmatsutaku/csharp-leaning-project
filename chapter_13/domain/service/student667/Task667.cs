@@ -21,7 +21,7 @@ namespace chapter_13.domain.service.student667
 
         public bool Task2(string s)
         {
-           if (Regex.IsMatch(s, "A\d{1,2}"))
+           if (Regex.IsMatch(s, @"A\d{1,2}"))
            {
                return true;
            }
