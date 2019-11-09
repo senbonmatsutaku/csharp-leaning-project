@@ -87,12 +87,12 @@ namespace chapter_13.controller
         private static void RunTask(ITask task)
         {
             Information("１");
-            String s1 = "//";
+            String s1 = "・？";
             Console.WriteLine($"判定文字列：{s1}");
             Console.WriteLine($"結果　　　：{task.Task1(s1)}");
 
             Information("２");
-            String s2 = "A1";
+            String s2 = "A10";
             Console.WriteLine($"判定文字列：{s2}");
             Console.WriteLine($"結果　　　：{task.Task2(s2)}");
 
