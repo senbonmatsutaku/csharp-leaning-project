@@ -9,7 +9,7 @@ namespace chapter_13.domain.service.student667
     {
         public bool Task1(string s)
         {
-            if (Regex.IsMatch(s, @"[\s\S]"))
+            if (Regex.IsMatch(s, @".*"))
             {
                 return true;
             }
@@ -21,28 +21,14 @@ namespace chapter_13.domain.service.student667
 
         public bool Task2(string s)
         {
-            if(s.Length > 2)
-            {
-                if (Regex.IsMatch(s, "^A[0-9][0-9]"))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                if (Regex.IsMatch(s, "^A[0-9]"))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
+           if (Regex.IsMatch(s, "^A[0-9].*"))
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
         }
 
         public bool Task3(string s)
